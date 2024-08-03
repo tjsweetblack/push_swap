@@ -1,4 +1,4 @@
-#include "../push_swap.h"
+#include "../pushswap.h"
 int matrix_size(char **matrix)
 {
     int i;
@@ -10,7 +10,7 @@ int matrix_size(char **matrix)
     }    
     return(i);
 }
-int tab_size(int *tab)
+int tab_size(long *tab)
 {
     int i;
 

@@ -6,11 +6,11 @@
 /*   By: belmiro <belmiro@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/31 18:26:23 by badriano          #+#    #+#             */
-/*   Updated: 2024/08/02 09:57:30 by belmiro          ###   ########.fr       */
+/*   Updated: 2024/08/03 08:39:01 by belmiro          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../pushswap.h"
 
 void	check_is_digit(char **stack)
 {
@@ -70,7 +70,7 @@ void	check_sign_position(char **stack)
 		stack_pos++;
 	}
 }
-void check_is_limit(int *tab)
+void check_is_limit(long *tab)
 {
 	int	i;
 	int size;
@@ -87,4 +87,24 @@ void check_is_limit(int *tab)
 		i++;
 	}
 }
-
+void has_duplicates(long *tab, int size)
+{
+    int i;
+    int j;
+    
+    i = 0;
+    while (i < size) 
+    {
+        j = i + 1;
+        while (j < size)
+        {
+            if (tab[i] == tab[j])
+            {
+                printf("error");
+                exit(0);
+            }
+            j++;
+        }
+        i++;
+    }
+}
