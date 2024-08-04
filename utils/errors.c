@@ -6,7 +6,7 @@
 /*   By: belmiro <belmiro@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/31 18:26:23 by badriano          #+#    #+#             */
-/*   Updated: 2024/08/03 08:39:01 by belmiro          ###   ########.fr       */
+/*   Updated: 2024/08/04 08:28:04 by belmiro          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,13 +70,13 @@ void	check_sign_position(char **stack)
 		stack_pos++;
 	}
 }
-void check_is_limit(long *tab)
+void check_is_limit(long *tab, char **matrix )
 {
 	int	i;
 	int size;
 
 	i = 0;
-	size = tab_size(tab);
+	size = matrix_size(matrix);
 	while(i < size)
 	{
 		if (tab[i] > 2147483648 || tab[i] < -2147483648)

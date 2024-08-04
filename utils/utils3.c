@@ -1,32 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   intit_stack.c                                      :+:      :+:    :+:   */
+/*   utils3.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: belmiro <belmiro@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/03 08:45:50 by belmiro           #+#    #+#             */
-/*   Updated: 2024/08/04 08:09:09 by belmiro          ###   ########.fr       */
+/*   Created: 2024/08/04 10:34:41 by belmiro           #+#    #+#             */
+/*   Updated: 2024/08/04 10:39:04 by belmiro          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../pushswap.h"
 
-void    init_stack_a(char **argv, int argc, t_list **stack_a)
+int	ft_lstsize(t_list *lst)
 {
-    char    **matrix;
-    long    *tab;
-    t_list  *new;
-    int     size;
-    int     i;
-    
-    matrix = create_stack(argv, argc);
-    tab = create_tab(matrix);
-    size = matrix_size(matrix);
-    i = 0;
-    while(i < size)
-    {
-        new = ft_lstnew((int)tab[i]);
-        ft_lstadd_back(stack_a, new);
-        i++;
-    }
+	int	i;
+
+	i = 1;
+	if (!lst)
+		return (0);
+	while (lst->next)
+	{
+		lst = lst->next;
+		i++;
+	}
+	return (i);
+}
+t_list	*ft_lstlast(t_list *lst)
+{
+	if (!lst)
+		return (0);
+	while (lst->next != NULL)
+		lst = lst->next;
+	return (lst);
 }

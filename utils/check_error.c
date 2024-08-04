@@ -6,7 +6,7 @@
 /*   By: belmiro <belmiro@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/31 17:36:23 by badriano          #+#    #+#             */
-/*   Updated: 2024/08/03 08:52:57 by belmiro          ###   ########.fr       */
+/*   Updated: 2024/08/04 08:27:12 by belmiro          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ void	check_argments(char **argv, int argc)
 	check_is_digit(stack);
 	check_sign_position(stack);
 	tab = create_tab(stack);
-	check_is_limit(tab);
+	check_is_limit(tab, stack);
 	int size = matrix_size(stack);
 	has_duplicates(tab, size);
 }
