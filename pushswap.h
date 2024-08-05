@@ -6,7 +6,7 @@
 /*   By: belmiro <belmiro@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/03 08:38:19 by belmiro           #+#    #+#             */
-/*   Updated: 2024/08/04 10:41:29 by belmiro          ###   ########.fr       */
+/*   Updated: 2024/08/05 11:23:17 by belmiro          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,8 @@ char	**ft_split(char const *s, char c);
 int     ft_isdigit(int c);
 int     ft_lstsize(t_list *lst);
 t_list	*ft_lstlast(t_list *lst);
+int		get_min(t_list **stack, int val);
+void	printList(t_list* head);
 //stack functions
 int     is_sorted(t_list **stack);
 //rules operations
@@ -61,4 +63,6 @@ int     rr(t_list **stack_a, t_list **stack_b);
 int     rra(t_list **stack_a);
 int     rrb(t_list **stack_b);
 int     rrr(t_list **stack_a, t_list **stack_b);
+//sorting algotithms.
+void    sort_three(t_list *stack_a, t_list *stack_b);
 #endif

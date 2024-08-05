@@ -23,3 +23,11 @@ void    ft_error(char *message)
     printf("%s", message);
     exit(0);
 }
+void printList(t_list* head)
+{
+    t_list* current = head; // Start with the head node
+    while (current != NULL) {
+        printf("%d\n", current->value); // Print the data in the current node
+        current = current->next;       // Move to the next node
+    }
+}

@@ -6,7 +6,7 @@
 #    By: belmiro <belmiro@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/29 11:48:27 by badriano          #+#    #+#              #
-#    Updated: 2024/08/04 10:32:59 by belmiro          ###   ########.fr        #
+#    Updated: 2024/08/05 09:13:31 by belmiro          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,9 +15,10 @@ CFLAGS = -Wall -Werror -Wextra
 CC = gcc
 LIBFT_DIR = ./libft
 UTILS_DIR = ./utils
+SORT_DIR = ./sorting
 RULES_DIR = ./operations
 MAIN = main.c
-COMMON_SRC = $(UTILS_DIR)/*.c $(RULES_DIR)/*.c# Add common source files here
+COMMON_SRC = $(UTILS_DIR)/*.c $(RULES_DIR)/*.c $(SORT_DIR)/*.c# Add common source files here
 #COMMON_OBJ = $(COMMON_SRC:.c=.o)
 
 all: $(NAME)

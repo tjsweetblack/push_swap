@@ -33,3 +33,18 @@ t_list	*ft_lstlast(t_list *lst)
 		lst = lst->next;
 	return (lst);
 }
+int	get_min(t_list **stack, int val)
+{
+	t_list	*head;
+	int		min;
+
+	head = *stack;
+	min = head->index;
+	while (head->next)
+	{
+		head = head->next;
+		if ((head->index < min) && head->index != val)
+			min = head->index;
+	}
+	return (min);
+}
