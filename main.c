@@ -6,7 +6,7 @@
 /*   By: belmiro <belmiro@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/31 17:09:14 by badriano          #+#    #+#             */
-/*   Updated: 2024/08/05 11:46:36 by belmiro          ###   ########.fr       */
+/*   Updated: 2024/08/06 06:58:54 by belmiro          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,9 @@ void	sort_stack(t_list **stack_a, t_list **stack_b)
 	}else if (size == 3)
 	{
 		sort_three(*stack_a, *stack_b);
+	}else
+	{
+		insertion_sort(stack_a, stack_b);
 	}
 }
 

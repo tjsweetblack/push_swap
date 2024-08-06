@@ -6,7 +6,7 @@
 /*   By: belmiro <belmiro@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/03 08:38:19 by belmiro           #+#    #+#             */
-/*   Updated: 2024/08/05 11:23:17 by belmiro          ###   ########.fr       */
+/*   Updated: 2024/08/06 06:56:00 by belmiro          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,7 @@ int     rr(t_list **stack_a, t_list **stack_b);
 int     rra(t_list **stack_a);
 int     rrb(t_list **stack_b);
 int     rrr(t_list **stack_a, t_list **stack_b);
-//sorting algotithms.
+//sorting algotithms
 void    sort_three(t_list *stack_a, t_list *stack_b);
+void	insertion_sort(t_list **stack_a, t_list **stack_b);
 #endif

@@ -6,7 +6,7 @@
 /*   By: belmiro <belmiro@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/04 09:54:37 by belmiro           #+#    #+#             */
-/*   Updated: 2024/08/04 10:06:53 by belmiro          ###   ########.fr       */
+/*   Updated: 2024/08/06 07:38:09 by belmiro          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../pushswap.h"
@@ -42,7 +42,7 @@ int	pa(t_list **stack_a, t_list **stack_b)
 {
 	if (push(stack_a, stack_b) == -1)
 		return (-1);
-	printf("pa");
+	printf("pa\n");
 	return (0);
 }
 
@@ -50,7 +50,7 @@ int	pb(t_list **stack_a, t_list **stack_b)
 {
 	if (push(stack_b, stack_a) == -1)
 		return (-1);
-	printf("pb");
+	printf("pb\n");
 	return (0);
 }
 

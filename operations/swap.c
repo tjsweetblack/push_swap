@@ -38,7 +38,7 @@ int	sa(t_list **stack_a)
 {
 	if (swap(stack_a) == -1)
 		return (-1);
-	printf("sa");
+	printf("sa\n");
 	return (0);
 }
 
