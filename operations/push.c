@@ -6,10 +6,11 @@
 /*   By: belmiro <belmiro@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/04 09:54:37 by belmiro           #+#    #+#             */
-/*   Updated: 2024/08/06 07:38:09 by belmiro          ###   ########.fr       */
+/*   Updated: 2024/08/06 11:24:59 by belmiro          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../pushswap.h"
+
 // Takes the first element of one stack and puts it at the top of another | pa and pb
 int	push(t_list **stack_to, t_list **stack_from)
 {
@@ -53,4 +54,3 @@ int	pb(t_list **stack_a, t_list **stack_b)
 	printf("pb\n");
 	return (0);
 }
-

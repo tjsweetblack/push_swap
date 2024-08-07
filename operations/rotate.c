@@ -30,7 +30,7 @@ int	ra(t_list **stack_a)
 {
 	if (rotate(stack_a) == -1)
 		return (-1);
-	printf("ra");
+	printf("ra\n");
 	return (0);
 }
 
@@ -38,7 +38,7 @@ int	rb(t_list **stack_b)
 {
 	if (rotate(stack_b) == -1)
 		return (-1);
-	printf("rb");
+	printf("rb\n");
 	return (0);
 }
 
@@ -48,7 +48,7 @@ int	rr(t_list **stack_a, t_list **stack_b)
 		return (-1);
 	rotate(stack_a);
 	rotate(stack_b);
-	printf("rr");
+	printf("rr\n");
 	return (0);
 }
 

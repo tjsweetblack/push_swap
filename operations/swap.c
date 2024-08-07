@@ -46,7 +46,7 @@ int	sb(t_list **stack_b)
 {
 	if (swap(stack_b) == -1)
 		return (-1);
-	printf("sb");
+	printf("sb\n");
 	return (0);
 }
 
@@ -56,7 +56,7 @@ int	ss(t_list **stack_a, t_list **stack_b)
 		return (-1);
 	swap(stack_a);
 	swap(stack_b);
-	printf("ss");
+	printf("ss\n");
 	return (0);
 }
 
