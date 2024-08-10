@@ -6,7 +6,7 @@
 /*   By: belmiro <belmiro@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/03 08:38:19 by belmiro           #+#    #+#             */
-/*   Updated: 2024/08/06 06:56:00 by belmiro          ###   ########.fr       */
+/*   Updated: 2024/08/10 10:17:59 by belmiro          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,10 +47,12 @@ char	**ft_split(char const *s, char c);
 int     ft_isdigit(int c);
 int     ft_lstsize(t_list *lst);
 t_list	*ft_lstlast(t_list *lst);
-int		get_min(t_list **stack, int val);
 void	printList(t_list* head);
 //stack functions
 int     is_sorted(t_list **stack);
+void	index_stack(t_list *stack);
+int	get_min(t_list **stack, int val);
+int 	get_distance(t_list **stack, int index);
 //rules operations
 int     sa(t_list **stack_a);
 int     sb(t_list **stack_b);
@@ -63,7 +65,10 @@ int     rr(t_list **stack_a, t_list **stack_b);
 int     rra(t_list **stack_a);
 int     rrb(t_list **stack_b);
 int     rrr(t_list **stack_a, t_list **stack_b);
+void	ft_free(char **str);
 //sorting algotithms
-void    sort_three(t_list *stack_a, t_list *stack_b);
-void	insertion_sort(t_list **stack_a, t_list **stack_b);
+void	sort_3(t_list **stack_a);
+void	sort_4(t_list **stack_a, t_list **stack_b);
+void	sort_5(t_list **stack_a, t_list **stack_b);
+void	radix_sort(t_list **stack_a, t_list **stack_b);
 #endif
