@@ -1,15 +1,29 @@
-#include "../pushswap.h"
-int matrix_size(char **matrix)
-{
-    int i;
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   utils1.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: belmiro <belmiro@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/08/12 07:18:01 by belmiro           #+#    #+#             */
+/*   Updated: 2024/08/12 07:27:20 by belmiro          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-    i = 0;
-    while (matrix[i])
-    {
-        i++;
-    }    
-    return(i);
+#include "../pushswap.h"
+
+int	matrix_size(char **matrix)
+{
+	int	i;
+
+	i = 0;
+	while (matrix[i])
+	{
+		i++;
+	}
+	return (i);
 }
+
 t_list	*ft_lstnew(int value)
 {
 	t_list	*new;
@@ -21,6 +35,7 @@ t_list	*ft_lstnew(int value)
 	new->next = NULL;
 	return (new);
 }
+
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	if (!new)
@@ -28,6 +43,7 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 	new->next = *lst;
 	*lst = new;
 }
+
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*ptr;
@@ -42,9 +58,10 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 		ptr->next = new;
 	}
 }
+
 long	ft_atoi(const char *str)
 {
-	int	sign;
+	int		sign;
 	long	result;
 
 	sign = 1;

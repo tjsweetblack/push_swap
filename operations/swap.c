@@ -6,12 +6,12 @@
 /*   By: belmiro <belmiro@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/04 09:51:35 by belmiro           #+#    #+#             */
-/*   Updated: 2024/08/04 10:06:53 by belmiro          ###   ########.fr       */
+/*   Updated: 2024/08/12 07:52:40 by belmiro          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../pushswap.h"
-// Swaps first two elements of a stack | sa and sb
+
 int	swap(t_list **stack)
 {
 	t_list	*head;
@@ -38,7 +38,7 @@ int	sa(t_list **stack_a)
 {
 	if (swap(stack_a) == -1)
 		return (-1);
-	printf("sa\n");
+	ft_printf("sa\n");
 	return (0);
 }
 
@@ -46,19 +46,16 @@ int	sb(t_list **stack_b)
 {
 	if (swap(stack_b) == -1)
 		return (-1);
-	printf("sb\n");
+	ft_printf("sb\n");
 	return (0);
 }
 
 int	ss(t_list **stack_a, t_list **stack_b)
-{	
+{
 	if ((ft_lstsize(*stack_a) < 2) || (ft_lstsize(*stack_b) < 2))
 		return (-1);
 	swap(stack_a);
 	swap(stack_b);
-	printf("ss\n");
+	ft_printf("ss\n");
 	return (0);
 }
-
-// Takes the first element of one stack and puts it at the top of another | pa and pb
-

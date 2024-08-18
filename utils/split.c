@@ -6,9 +6,10 @@
 /*   By: belmiro <belmiro@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/04 08:21:20 by belmiro           #+#    #+#             */
-/*   Updated: 2024/08/04 08:21:32 by belmiro          ###   ########.fr       */
+/*   Updated: 2024/08/12 07:45:39 by belmiro          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "../pushswap.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
@@ -27,8 +28,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 		}
 		dst[i] = '\0';
 	}
-
-	while(src[j])
+	while (src[j])
 	{
 		j++;
 	}

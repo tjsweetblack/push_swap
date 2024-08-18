@@ -6,7 +6,7 @@
 /*   By: belmiro <belmiro@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/10 08:28:09 by belmiro           #+#    #+#             */
-/*   Updated: 2024/08/10 10:19:02 by belmiro          ###   ########.fr       */
+/*   Updated: 2024/08/12 14:20:37 by belmiro          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ void	radix_sort(t_list **stack_a, t_list **stack_b)
 			else
 				pb(stack_a, stack_b);
 		}
-		while (ft_lstsize(*stack_b) != 0)
+		while (ft_lstsize(*stack_b) > 0)
 			pa(stack_a, stack_b);
 		i++;
 	}

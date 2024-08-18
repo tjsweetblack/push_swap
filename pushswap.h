@@ -6,14 +6,14 @@
 /*   By: belmiro <belmiro@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/03 08:38:19 by belmiro           #+#    #+#             */
-/*   Updated: 2024/08/12 04:40:19 by belmiro          ###   ########.fr       */
+/*   Updated: 2024/08/12 13:21:11 by belmiro          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSHSWAP_H
 # define PUSHSWAP_H
 # include <stdlib.h>
-# include <stdio.h>
+# include "./ft_printf/ft_printf.h"
 # include <unistd.h>
 
 typedef struct s_list
@@ -46,12 +46,13 @@ char	**ft_split(char const *s, char c);
 int		ft_isdigit(int c);
 int		ft_lstsize(t_list *lst);
 t_list	*ft_lstlast(t_list *lst);
-void	printList(t_list *head);
+void	ft_free_matrix(char **str);
 //stack functions
 int		is_sorted(t_list **stack);
 void	index_stack(t_list *stack);
 int		get_min(t_list **stack, int val);
 int		get_distance(t_list **stack, int index);
+void	free_stack(t_list **stack);
 //rules operations
 int		sa(t_list **stack_a);
 int		sb(t_list **stack_b);

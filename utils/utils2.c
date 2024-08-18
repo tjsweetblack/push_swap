@@ -6,7 +6,7 @@
 /*   By: belmiro <belmiro@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/10 06:30:01 by belmiro           #+#    #+#             */
-/*   Updated: 2024/08/10 06:31:28 by belmiro          ###   ########.fr       */
+/*   Updated: 2024/08/12 06:36:31 by belmiro          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,16 +30,9 @@ int	is_sorted(t_list **stack)
 	}
 	return (1);
 }
-void    ft_error(char *message)
+
+void	ft_error(char *message)
 {
-    printf("%s", message);
-    exit(0);
-}
-void printList(t_list* head)
-{
-    t_list* current = head; // Start with the head node
-    while (current != NULL) {
-        printf("%d\n", current->value); // Print the data in the current node
-        current = current->next;       // Move to the next node
-    }
+	ft_printf("%s", message);
+	exit(0);
 }

@@ -6,13 +6,13 @@
 /*   By: belmiro <belmiro@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/04 09:54:33 by belmiro           #+#    #+#             */
-/*   Updated: 2024/08/06 11:21:58 by belmiro          ###   ########.fr       */
+/*   Updated: 2024/08/12 07:49:34 by belmiro          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../pushswap.h"
-// Shifts down all elements of a stack by 1. The last element becomes the first one | rra and rrb
-int	reverseRotate(t_list **stack)
+
+int	reverse_rotate(t_list **stack)
 {
 	t_list	*head;
 	t_list	*tail;
@@ -25,8 +25,8 @@ int	reverseRotate(t_list **stack)
 	{
 		if (head->next->next == NULL)
 		{
-			 head->next = NULL;
-			 break ;
+			head->next = NULL;
+			break ;
 		}
 		head = head->next;
 	}
@@ -37,17 +37,17 @@ int	reverseRotate(t_list **stack)
 
 int	rra(t_list **stack_a)
 {
-	if (reverseRotate(stack_a) == -1)
+	if (reverse_rotate(stack_a) == -1)
 		return (-1);
-	printf("rra\n");
+	ft_printf("rra\n");
 	return (0);
 }
 
 int	rrb(t_list **stack_b)
 {
-	if (reverseRotate(stack_b) == -1)
+	if (reverse_rotate(stack_b) == -1)
 		return (-1);
-	printf("rrb\n");
+	ft_printf("rrb\n");
 	return (0);
 }
 
@@ -55,8 +55,8 @@ int	rrr(t_list **stack_a, t_list **stack_b)
 {
 	if ((ft_lstsize(*stack_a) < 2) || (ft_lstsize(*stack_b) < 2))
 		return (-1);
-	reverseRotate(stack_a);
-	reverseRotate(stack_b);
-	printf("rrr\n");
+	reverse_rotate(stack_a);
+	reverse_rotate(stack_b);
+	ft_printf("rrr\n");
 	return (0);
 }
